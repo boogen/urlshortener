@@ -2,24 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"> 
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' " />
  
-  <title>cdg.sh</title>
+  <title>URL Shortener</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://unpkg.com/vue@2"></script>
+  
 </head>
 <body>
 
   <main id="app">
+    <h1 class="header">URL Shortener</h1>
     <div class="container">
-        <h1>URL Shortener</h1>
+    
         <form class="form" v-if="formVisible" @submit.prevent="createUrl()">
-        <input class="input" type="text" v-model="url" name="url" id="url" placeholder="Type in your URL">
-        <br>
-        <br>
-        <button class="button" type="submit" >Shorten</button>
+            <input class="input" type="text" v-model="url" name="url" id="url" placeholder="Type in your URL">
+            <br>
+            <button class="button" type="submit" >Shorten</button>
         </form>
+        <div v-if="created">
+            <p class="created">Your short url is: <a :href="created">{{created}}</a></p>
+        </div>
     </div>
+   
   </main>
   <script src="app.js"></script>
 </body>
