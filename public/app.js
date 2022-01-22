@@ -23,7 +23,7 @@ const app = new Vue({
         if (response.ok) {
           const result = await response.json();
           this.formVisible = false;
-          this.created = `http://localhost:1337/${result.slug}`;
+          this.created = `https://bgns.herokuapp.com/${result.slug}`;
         } else if (response.status === 429) {
           this.error = 'You are sending too many requests. Try again in 30 seconds.';
         } else {
