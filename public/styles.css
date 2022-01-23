@@ -1,14 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+
   html,
   body {
     height: 100%;
   }
 
+  .app {
+      margin: 0 auto;
+  }
   
   .header {
     display: flex;
@@ -20,10 +18,11 @@
   
   
   .container {
-    display: flex;
+    display: table;
     margin:auto;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
+
   }
   
   .formContainer h1 {
@@ -31,13 +30,15 @@
   }
   
   input {
-    width: 706px;
-    height: 50px;
+    margin-top: 50px;
+    width: 700px;
+    height: 100px;
     border: 1px solid #E8E8E8;
     border-radius: 8px;
     background-color:#F6F6F6;
     outline: none;
-    
+    text-align: center;
+    font-size: 24px;
   }
   
   input[type=text]::placeholder {
@@ -53,7 +54,7 @@
     border-radius: 100px;
     color: white;
     width: 100%;
-    height: 50px;
+    height: 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

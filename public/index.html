@@ -15,7 +15,6 @@
     <div class="container">
     
         <form class="form" v-if="formVisible" @submit.prevent="createUrl()">
-            <br>
             <input class="input" type="text" v-model="url" name="url" id="url" placeholder="Type in your URL">
             <br>
             <button class="button" type="submit" >Shorten</button>
